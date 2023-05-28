@@ -1,0 +1,87 @@
+* Chapter 4 review questions
+** Ad. 1. What is a computation?
+It is the act of giving input and producing output. Usually computing (calculcating)
+some numbers.
+** Ad. 2. What do we mean by inputs and outputs to a computation? Give examples.
+Inputs can be from keyboard, mice, files, other parts of programs, other programs.
+Outputs can be monitors, other screens, files, other programs, visualizers etc.
+** Ad. 3. What are the three requirements a programmer should keep in mind when expressing computations?
+The program should be simple, correct and efficient. Correctness is the most
+important requirement.
+** Ad. 4. What does an expression do?
+Expressions compute values from a set of operands using operators. Simplest 
+expressions are just literals like 1, 2 or "abcd".
+** Ad. 5. What is the difference between a statement and an expression, as described in this chapter?
+Statements are used to control the flow of programs, iterate and change many values
+at once. Expressions are simple assignments or computations.
+** Ad. 6. What is an lvalue? List the operators that require an lvalue. Why do these operators, and not the others, require an lvalue?
+Lvalue is the "left hand side of expression", that is the "box" that holds a value (rvalue).
+It is the name of the variable (usually) that we can manipulate in an expression or
+statement. Operators that require lvalue are ++, --, assignment = and compound
+assignment *= += -= /= %=.
+** Ad. 7. What is a constant expression?
+It is an expression that is known at compile time and can't be changed after
+initialization.
+** Ad. 8. What is a literal?
+It is a simple constant value, such as numbers (1, 3, 5.5) or strings ("abcd") or
+characters ('a').
+** Ad. 9. What is a symbolic constant and why do we use them?
+It is some number that is required for computation that has a constant value (
+e.g. pi, 3.14). We use them to make code more readable.
+** Ad. 10. What is a magic constant? Give examples.
+Magic constants are seemingly random numbers used in expressions, that should be
+named and made symbolic constants. They make code less readable. Some magic
+constants are "3.14" "2.54" instead of "pi" or "cm_to_in".
+** Ad. 11. What are some operators that we can use for integers and floating-point values?
+We can use all arithmetic operators except for modulo (%), that can be used only
+for integers. Also assignments, comparison increment, decrement and function calls.
+** Ad. 12. What operators can be used on integers but not on floating-point numbers?
+Modulo operator (%).
+** Ad. 13. What are some operators that can be used for strings?
+Assignment = and comparison == > < => <=.
+** Ad. 14. When would a programmer prefer a switch-statement to an if-statement?
+If they are comparing against a set of known constants. Then the code is cleaner
+than a bunch of nested if statements.
+** Ad. 15. What are some common problems with switch-statements?
+Forgetting to terminate cases with "break". Can't use variables as case labels.
+** Ad. 16. What is the function of each part of the header line in a for-loop, and in what sequence are they executed?
+First part defines the iterator variable (usually i). Second part is the limit,
+when should we stop iterating. Third part is what we do every loop (usually
+increment the indexing variable).
+** Ad. 17. When should the for-loop be used and when should the while-loop be used?
+For-loop should be used when iterating over a set of some values and when we
+know exactly what the termination criteria are. While loops should be used when
+termination criteria are dependent on the input or the size of set is unknown.
+** Ad. 18. How do you print the numeric value of a char?
+You assign the char into an int variable and output it.
+** Ad. 19. Describe what the line char foo(int x) means in a function definition.
+It is defining what the return type of function is (char), what is its' name (foo)
+and how many and what types of arguments it takes (one argument, int, named x).
+** Ad. 20. When should you define a separate function for part of a program? List reasons.
+- separate code into logical blocks
+- make code more readable
+- make code more maintainable
+- to reduce repetition
+** Ad. 21. What can you do to an int that you cannot do to a string?
+You can do arithmetic on ints (addition, substraction etc.).
+** Ad. 22. What can you do to a string that you cannot do to an int?
+You can concatenate by using the + operator.
+** Ad. 23. What is the index of the third element of a vector?
+2, because vector indexing starts at 0.
+** Ad. 24. How do you write a for-loop that prints every element of a vector?
+for (int i = 0; i < vector.size(); ++i) {
+  cout << vector[i] << "\n";
+}
+** Ad. 25. What does vector<char> alphabet(26); do?
+Defines a vector of "char" named alphabet, with 26 items in it, all initalized
+to 0 (empty char).
+** Ad. 26. Describe what push_back() does to a vector.
+It adds an item to the end of vector and increases its' size by 1.
+** Ad. 27. What do vector’s member functions begin(), end(), and size() do?
+begin() return the first element, end() returns the last and size() returns the
+amount of items in the vector.
+** Ad. 28. What makes vector so popular/useful?
+It is a simple and efficient way of storing many values in one place. It allows
+to quickly traverse and modify them.
+** Ad. 29. How do you sort the elements of a vector?
+By using the sort() function.
